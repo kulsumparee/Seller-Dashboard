@@ -28,12 +28,15 @@ html {
   padding: 20px 0;
 }
 
+.mentitems{
+font-size: 10px;
+}
+
 .SidebarMenus ul li a {
   padding: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
-  /* Spacing between icon and text */
   color: black;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -105,6 +108,7 @@ html {
 
 .sideHeadings {
   font-weight: 500;
+  font-size: 15px;
 }
 
 .sideimg:hover {
@@ -129,43 +133,23 @@ html {
     background: #e6e8ec;
   }
 
-  /* xs, sm, md */
   .sidebar {
-    /* width: 65px; */
-    display: none;
-    /* Shrink sidebar width */
-  }
-
-  /* .sidebar ul li a {
-    justify-content: center;
-    gap: 0; 
-  }
-
-  .sidebar ul li a span {
     display: none;
   }
 
-  .sidebar ul li a i {
-    font-size: 1.5rem; 
-  } */
 }
 
-/* Larger screens show full sidebar */
 @media (min-width: 992px) {
 
-  /* lg, xl */
   .sidebar {
     width: 219px;
-    /* Full width */
   }
 
   .sidebar ul li a span {
     display: inline;
-    /* Show text */
   }
 }
 
-/* Content */
 #content {
   flex: 1;
   background: #f6f6f6;
@@ -173,8 +157,6 @@ html {
   padding: 20px;
 }
 
-/* Navbar */
-/* Navbar */
 .navbar {
   background: red !important;
   border-radius: 8px;
@@ -199,12 +181,6 @@ html {
   width: 218px;
 }
 
-/* .dropdown-item {
-  color: #91646a;
-  font-size: 18px;
-  font-weight: 500;
-} */
-
 @media (min-width: 440px) {
   .navbar {
     background: #fff !important;
@@ -212,19 +188,20 @@ html {
   }
 }
 
-/* Cards */
 .card {
   border: none;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
+.renewcard{
+  height: 340px;
+}
 
 .card-body {
   padding: 1.5rem;
 }
 
-/* Stats Cards */
 .stats-card {
   background: #fff;
   border-radius: 8px;
@@ -232,13 +209,11 @@ html {
   margin-bottom: 20px;
 }
 
-/* Charts */
 .chart-container {
   position: relative;
   height: 300px;
 }
 
-/* Tables */
 .table {
   margin-bottom: 0;
   overflow: auto;
@@ -249,20 +224,6 @@ html {
   font-weight: 600;
 }
 
-/* Responsive */
-/* @media (max-width: 768px) {
-  .sidebar {
-    margin-left: -250px;
-  }
-  .sidebar.active {
-    margin-left: 0;
-  }
-  #content {
-    width: 100%;
-  }
-} */
-
-/* Status Badges */
 .status-badge {
   padding: 5px 10px;
   border-radius: 20px;
@@ -288,7 +249,6 @@ html {
   height: 350px;
 }
 
-/* dashboard cards  */
 .card-container {
   background: #ffffff;
   border: 3px solid #f1f1f1;
@@ -318,7 +278,6 @@ html {
   margin-bottom: 0;
 }
 
-/* domain sales */
 :root {
   --primary-blue: #0052cc;
   --status-green: #36b37e;
@@ -479,10 +438,6 @@ body {
   background: none;
 }
 
-/* account setting */
-/* Card Styles */
-
-/* Form Styles */
 .form-control {
   border-color: #e1e5ea;
   padding: 0.6rem 1rem;
@@ -501,14 +456,12 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Profile Section */
 .profile-image img {
   width: 68px;
   height: 68px;
   object-fit: cover;
 }
 
-/* Section Styles */
 section {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #e5e7eb;
@@ -518,7 +471,6 @@ section:last-of-type {
   border-bottom: none;
 }
 
-/* Form Check Styles */
 .form-check-input {
   width: 1.1em;
   height: 1.1em;
@@ -531,7 +483,6 @@ section:last-of-type {
   border-color: #3b82f6;
 }
 
-/* Button Styles */
 .btn-primary {
   background-color: #3b82f6;
   border-color: #3b82f6;
@@ -548,7 +499,6 @@ section:last-of-type {
   padding: 0.25rem 0.75rem;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
   .card-body {
     padding: 1.5rem;
@@ -561,15 +511,12 @@ section:last-of-type {
   }
 }
 
-/* traffic overview */
-/* Dashboard Layout */
 .dashboard-container {
   padding: 2rem;
   background-color: #f8f9fa;
   min-height: 100vh;
 }
 
-/* Cards */
 .traffic-card,
 .trending-card,
 .Recent-card {
@@ -579,7 +526,6 @@ section:last-of-type {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
-/* Chart Container */
 .chart-container {
   position: relative;
   width: 200px;
@@ -595,6 +541,14 @@ section:last-of-type {
   text-align: center;
 }
 
+.overview{
+font-size: 14px;
+}
+
+.percent{
+font-size: 13px;
+}
+
 .visits-number {
   display: block;
   font-size: 1.5rem;
@@ -607,7 +561,6 @@ section:last-of-type {
   color: #858796;
 }
 
-/* Traffic Sources */
 .source {
   display: flex;
   align-items: center;
@@ -620,6 +573,7 @@ section:last-of-type {
   height: 12px;
   border-radius: 50%;
   margin-right: 0.5rem;
+  
 }
 
 .dot.direct {
@@ -638,7 +592,6 @@ section:last-of-type {
   background-color: #9FA6CF;
 }
 
-/* Domain List */
 .domain-list {
   margin-top: 1rem;
 }
@@ -674,18 +627,16 @@ section:last-of-type {
   font-size: 0.875rem;
 }
 
-/* Card Titles */
 .card-title {
   color: #5a5c69;
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
 
-/* Card Styles */
 .revenue-container,
 .leads-container {
   background: white;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 1.5rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   height: 100%;
@@ -696,7 +647,6 @@ section:last-of-type {
   font-weight: 500;
 }
 
-/* Revenue Stats */
 .revenue-stats {
   display: flex;
   flex-direction: column;
@@ -719,18 +669,15 @@ section:last-of-type {
   color: #6c757d !important;
 }
 
-/* Leads Chart Container */
 .leads-container {
   min-height: 400px;
 }
 
-/* Responsive Canvas Container */
 #leadsChart {
   width: 100% !important;
   height: 300px !important;
 }
 
-/* Recently domains */
 .news-card {
   border: none;
   margin-bottom: 1rem;
@@ -766,7 +713,6 @@ section:last-of-type {
   }
 }
 
-/* Navbar */
 .navbar {
   background: #fff !important;
   border-radius: 8px;
@@ -779,7 +725,6 @@ section:last-of-type {
   }
 }
 
-/* Cards */
 .card {
   border: none;
   border-radius: 8px;
@@ -791,7 +736,6 @@ section:last-of-type {
   padding: 1.5rem;
 }
 
-/* Stats Cards */
 .stats-card {
   background: #fff;
   border-radius: 8px;
@@ -799,13 +743,11 @@ section:last-of-type {
   margin-bottom: 20px;
 }
 
-/* Charts */
 .chart-container {
   position: relative;
   height: 300px;
 }
 
-/* Tables */
 .table {
   margin-bottom: 0;
   overflow: auto;
@@ -814,24 +756,13 @@ section:last-of-type {
 .table th {
   border-top: none;
   font-weight: 600;
+  font-size: 14px;
+}
+.table td {
+  font-weight: 400;
+  font-size: 14px;
 }
 
-/* Responsive
-@media (max-width: 768px) {
-  .sidebar {
-    margin-left: -250px;
-  }
-
-  .sidebar.active {
-    margin-left: 0;
-  }
-
-  #content {
-    width: 100%;
-  }
-} */
-
-/* Status Badges */
 .status-badge {
   padding: 5px 10px;
   border-radius: 20px;
@@ -857,7 +788,6 @@ section:last-of-type {
   height: 350px;
 }
 
-/* dashboard cards  */
 .card-container {
   background: #ffffff;
   border: 3px solid #f1f1f1;
@@ -887,7 +817,6 @@ section:last-of-type {
   margin-bottom: 0;
 }
 
-/* domain sales */
 :root {
   --primary-blue: #0052cc;
   --status-green: #36b37e;
@@ -931,7 +860,7 @@ body {
   background-color: var(--primary-blue);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding:11px 8px ;
   border-radius: 4px;
 }
 
@@ -939,6 +868,7 @@ body {
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
+  min-width: 100%;
 }
 
 .table th {
@@ -1046,10 +976,6 @@ body {
   background: none;
 }
 
-/* account setting */
-/* Card Styles */
-
-/* Form Styles */
 .form-control {
   border-color: #e1e5ea;
   padding: 0.6rem 1rem;
@@ -1068,14 +994,12 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Profile Section */
 .profile-image img {
   width: 78px;
   height: 78px;
   object-fit: cover;
 }
 
-/* Section Styles */
 section {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #e5e7eb;
@@ -1085,7 +1009,6 @@ section:last-of-type {
   border-bottom: none;
 }
 
-/* Form Check Styles */
 .form-check-input {
   width: 1.1em;
   height: 1.1em;
@@ -1098,7 +1021,6 @@ section:last-of-type {
   border-color: #3b82f6;
 }
 
-/* Button Styles */
 .btn-primary {
   background-color: #3b82f6;
   border-color: #3b82f6;
@@ -1115,22 +1037,18 @@ section:last-of-type {
   padding: 0.25rem 0.75rem;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
   .card-body {
     padding: 1.5rem;
   }
 }
 
-/* traffic overview */
-/* Dashboard Layout */
 .dashboard-container {
   padding: 2rem;
   background-color: #f8f9fa;
   min-height: 100vh;
 }
 
-/* Cards */
 .traffic-card,
 .trending-card,
 .Recent-card {
@@ -1140,7 +1058,6 @@ section:last-of-type {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
-/* Chart Container */
 .chart-container {
   position: relative;
   width: 200px;
@@ -1168,7 +1085,6 @@ section:last-of-type {
   color: #858796;
 }
 
-/* Traffic Sources */
 .source {
   display: flex;
   align-items: center;
@@ -1199,7 +1115,6 @@ section:last-of-type {
   background-color: #9FA6CF;
 }
 
-/* Domain List */
 .domain-list {
   margin-top: 1rem;
 }
@@ -1218,7 +1133,6 @@ section:last-of-type {
 @media (max-width: 640px) {
   .domain-item {
     display: flex;
-    /* flex-direction: column; */
     column-gap: 10px;
   }
 }
@@ -1231,6 +1145,11 @@ section:last-of-type {
 
 .domain-title {
   color: #041e42;
+  font-size: 15px;
+}
+.domain-text{
+  font-size: 13px;
+  color: #858796;
 }
 
 .domain-info {
@@ -1253,13 +1172,11 @@ section:last-of-type {
   font-size: 0.875rem;
 }
 
-/* Card Titles */
 .card-title {
   color: #5a5c69;
   font-weight: 500;
 }
 
-/* Card Styles */
 .revenue-container,
 .leads-container {
   background: white;
@@ -1274,7 +1191,6 @@ section:last-of-type {
   font-weight: 500;
 }
 
-/* Revenue Stats */
 .revenue-stats {
   display: flex;
   flex-direction: column;
@@ -1297,18 +1213,15 @@ section:last-of-type {
   color: #6c757d !important;
 }
 
-/* Leads Chart Container */
 .leads-container {
   min-height: 312px;
 }
 
-/* Responsive Canvas Container */
 #leadsChart {
   width: 100% !important;
   height: 200px !important;
 }
 
-/* Recently domains */
 .news-card {
   border: none;
   margin-bottom: 1rem;
@@ -1340,7 +1253,7 @@ section:last-of-type {
   background: #041e42;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -1357,7 +1270,7 @@ section:last-of-type {
 }
 
 .newspara {
-  font-size: 16px;
+  font-size: 15px;
   color: #041e42;
   font-weight: 500;
 }
@@ -1373,18 +1286,24 @@ section:last-of-type {
 }
 
 .headingcolor {
-  font-size: 28px;
+  font-size: 23px;
   font-weight: 500;
   color: #041e42;
+}
+
+.link{
+  text-decoration: none;
 }
 
 .color {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
   color: #041e42;
 }
+.renew{
+  font-size: 13px;
+}
 
-/* Modal css */
 .modal-content {
   border-radius: 16px;
   border: none;
@@ -1446,11 +1365,8 @@ section:last-of-type {
 .btn-custom-shadow {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: none;
-  /* Removes the border */
   background-color: white;
-  /* Optional: Background color to match container */
   padding: 8px 5px;
-  /* Adds padding for better spacing */
 }
 
 .dot {
@@ -1458,11 +1374,8 @@ section:last-of-type {
   width: 8px;
   height: 8px;
   background-color: rgb(110, 105, 105);
-  /* You can change the color as needed */
   border-radius: 50%;
-  /* Makes it a circle */
   margin-right: 10px;
-  /* Adds space between the dot and the text */
 }
 
 .searchbutton {
@@ -1536,12 +1449,13 @@ section:last-of-type {
 .topheading {
   color: #041E42;
   font-weight: 600;
-  font-size: 30px
+  font-size: 28px
 }
 
 .toptitle {
   font-weight: 500;
   color: #626974;
+  font-size: 15px;
 }
 
 .resulttext {
