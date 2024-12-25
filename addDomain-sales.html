@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Sales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="">
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger ">
+            <div class="container-fluid flex-nowrap ">
+                <!-- toggler -->
+                <button class="btn float-end showMenuIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                    role="button">
+                    <i class="bi bi-list fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+                </button>
+                <img src="./assets/arrowHeader.svg" alt="" width="50px" height="50px">
+
+                <div class="ms-auto d-flex align-items-center">
+                    <!-- Notification Icon -->
+                    <button class="btn btn-light position-relative me-3">
+                        <img src="/assets/navbell.svg" alt="">
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">5</span>
+                    </button>
+
+                    <!-- User Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle custom-dropdown-toggle" type="button"
+                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/assets/sheba.svg" alt="User" class="rounded-2 me-2" width="50px" height="50px">
+                            <span>Sakha</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end ">
+                            <div class=" d-flex  justify-content-center">
+                                <a href="buyer.html">
+
+                                    <button class="buyer-bth">Switch to buyer</button>
+                                </a>
+                            </div>
+                            <p class="dropdown-item d-flex justify-content-center pt-2">1212 Pending Task</p>
+                            <ul class=" list-unstyled">
+                                <hr class=" mx-3">
+                                <li><a class="dropdown-item" href="#">Accounting</a></li>
+                                <li><a class="dropdown-item" href="#">Accounting</a></li>
+                                <li><a class="dropdown-item" href="#">Projects</a></li>
+                                <li><a class="dropdown-item" href="#">Projects</a></li>
+                                <hr class=" mx-3">
+                                <li><a class="dropdown-item" href="account-setting.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="offcanvas" data-bs-keyboard="false"
+                data-bs-backdrop="false">
+                <div class="offcanvas-header">
+                    <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body px-0 ">
+                    <div class="SidebarMenus">
+                        <ul class=" m-0 p-0">
+                            <!-- Dashboard -->
+                            <li class="active">
+                                <a href="index.html" class=" d-flex gap-2">
+                                    <img src="/assets/homeside.svg" alt="dashboard"> <span class="">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <!-- My Domains -->
+                            <li>
+                                <a href="#domainSubmenu" data-bs-toggle="collapse"
+                                    class="d-flex justify-content-between align-items-center">
+                                    <div class=" sideimg d-flex gap-2">
+                                        <img src="/assets/domain.svg" alt="domain"> <span class="">My
+                                            Domains</span>
+                                    </div>
+                                    <i class="bi bi-chevron-down "></i>
+                                </a>
+                                <ul class="collapse list-unstyled" id="domainSubmenu">
+                                    <li>
+                                        <a href="domains-sales.html">
+                                            <span class="dot"></span> <span>Domains Sales</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="domains-bulk.html">
+                                            <span class="dot"></span> <span>Domains Bulk</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="domains-rent.html">
+                                            <span class="dot"></span> <span>Domains Rent</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="domains-sold.html">
+                                            <span class="dot"></span> <span>Domains Sold</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Sales -->
+                            <li>
+                                <a href="#salesSubmenu" data-bs-toggle="collapse"
+                                    class="d-flex justify-content-between align-items-center">
+                                    <div class=" d-flex gap-2">
+                                        <img class="sideimg" src="/assets/sales.svg" alt="sales"> <span
+                                            class="sideHeadings">Sales</span>
+                                    </div>
+                                    <i class="bi bi-chevron-down "></i>
+                                </a>
+                                <ul class="collapse list-unstyled" id="salesSubmenu">
+                                    <li>
+                                        <a href="sales-active.html">
+                                            <span class="dot"></span> <span>Sales Active</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sales-unconfirmed.html">
+                                            <span class="dot"></span> <span>Sales Unconfirmed</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sales-archived.html">
+                                            <span class="dot"></span> <span>Sales Archived</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Finance -->
+                            <li>
+                                <a href="#financeSubmenu" data-bs-toggle="collapse"
+                                    class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex gap-3">
+                                        <img class="sideimg" src="/assets/finance.svg" alt="settings"> <span
+                                            class="sideHeadings">Finance</span>
+                                    </div>
+                                    <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <ul class="collapse list-unstyled" id="financeSubmenu">
+                                    <li>
+                                        <a href="finance.html">
+                                            <span class="dot"></span> <span>Finance Details</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <!-- Settings -->
+                            <li>
+                                <a href="#settingsSubmenu" data-bs-toggle="collapse"
+                                    class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex gap-3">
+                                        <img class="sideimg" src="/assets/settings.svg" alt="settings"> <span
+                                            class="sideHeadings">Settings</span>
+                                    </div>
+                                    <i class="bi bi-chevron-down "></i>
+                                </a>
+                                <ul class="collapse list-unstyled" id="settingsSubmenu">
+                                    <li>
+                                        <a href="account-setting.html">
+                                            <span class="dot"></span> <span>Account Setting</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sale-page.html">
+                                            <span class="dot"></span><span>Sale Page</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="payout-setting.html">
+                                            <span class="dot"></span><span>Payout Setting</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="privacy.html">
+                                            <span class="dot"></span> <span>Privacy</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="d-flex">
+            <nav id="sidebar" class="sidebar">
+                <ul class="list-unstyled components m-0 p-0">
+                    <!-- Dashboard -->
+                    <li class="active">
+                        <a href="index.html" class=" d-flex gap-2">
+                            <img src="/assets/home.svg" alt="dashboard"> <span class="sideHeadings">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <!-- My Domains -->
+                    <li>
+                        <a href="#domainSubmenu" data-bs-toggle="collapse"
+                            class="d-flex justify-content-between align-items-center">
+                            <div class=" sideimg d-flex gap-2">
+                                <img src="/assets/domain.svg" alt="domain"> <span class="sideHeadings">My Domains</span>
+                            </div>
+                            <i class="bi bi-chevron-down sideicon "></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="domainSubmenu">
+                            <li>
+                                <a href="domains-sales.html">
+                                    <span class="dot"></span> <span>Domains Sales</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="domains-bulk.html">
+                                    <span class="dot"></span> <span>Domains Bulk</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="domains-rent.html">
+                                    <span class="dot"></span> <span>Domains Rent</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="domains-sold.html">
+                                    <span class="dot"></span> <span>Domains Sold</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Sales -->
+                    <li>
+                        <a href="#salesSubmenu" data-bs-toggle="collapse"
+                            class="d-flex justify-content-between align-items-center">
+                            <div class=" d-flex gap-2">
+                                <img class="sideimg" src="/assets/sales.svg" alt="sales"> <span
+                                    class="sideHeadings">Sales</span>
+                            </div>
+                            <i class="bi bi-chevron-down sideicon"></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="salesSubmenu">
+                            <li>
+                                <a href="sales-active.html">
+                                    <span class="dot"></span> <span>Sales Active</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sales-unconfirmed.html">
+                                    <span class="dot"></span> <span>Sales Unconfirmed</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sales-archived.html">
+                                    <span class="dot"></span> <span>Sales Archived</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Finance -->
+
+                    <li>
+                        <a href="#financeSubmenu" data-bs-toggle="collapse"
+                            class="d-flex justify-content-between align-items-center ">
+                            <div class="d-flex gap-3">
+                                <img class="sideimg" src="/assets/finance.svg" alt="settings"> <span
+                                    class="sideHeadings">Finance</span>
+                            </div>
+                            <i class="bi bi-chevron-down sideicon"></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="financeSubmenu">
+                            <li>
+                                <a href="finance.html">
+                                    <span class="dot"></span> <span>Finance Details</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <!-- Settings -->
+                    <li>
+                        <a href="#settingsSubmenu" data-bs-toggle="collapse"
+                            class="d-flex justify-content-between align-items-center ">
+                            <div class="d-flex gap-3">
+                                <img class="sideimg" src="/assets/settings.svg" alt="settings"> <span
+                                    class="sideHeadings">Settings</span>
+                            </div>
+                            <i class="bi bi-chevron-down sideicon"></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="settingsSubmenu">
+                            <li>
+                                <a href="account-setting.html">
+                                    <span class="dot"></span> <span>Account Setting</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sale-page.html">
+                                    <span class="dot"></span> <span>Sale Page</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="payout-setting.html">
+                                    <span class="dot"></span> <span>Payout Setting</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="privacy.html">
+                                    <span class="dot"></span> <span>Privacy</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div style="height: 100vh; width: 100%;" id="content">
+                <div class="card p-4">
+                    <h4 class="mb-1 topheading">My Domains</h4>
+                    <small class="toptitle"> Sale</small>
+                </div>
+
+                <div>
+                    <ul class="list-unstyled d-flex gap-5 fw-semibold fs-4">
+                        <li><a class="domainsales" id="byHandLink" href="#">By Hand</a></li>
+                        <li><a class="domainsales" id="importExcelLink" href="#">Import Excel</a></li>
+                    </ul>
+                    <div class="main-heading itemsdiv" id="byHandDiv">
+                        <p class=" fs-5 fw-semibold">By Hand</p>
+                        <p class="text fs-4">example.com..</p>
+
+                        <div class="d-md-flex gap-5 py-5">
+                            <div class="">
+                                <label class="main-heading fs-4 fw-semibold py-4" for="category">Category</label>
+                                <select class="form-select " id="category">
+                                    <option selected>Select</option>
+                                    <option>Brandable</option>
+                                    <option>Geo Domains</option>
+                                    <option>Regular</option>
+                                    <option>Ultra Premium</option>
+                                </select>
+                            </div>
+
+                            <div class="">
+                                <label class="main-heading label fs-4 fw-semibold py-4" for="type">Type</label>
+                                <select class="form-select" id="type">
+                                    <option selected>Select</option>
+                                    <option>Buy Now</option>
+                                    <option>Make offer</option>
+                                    <option>Both</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="excel card py-4 px-4 mt-5" id="excelDiv" style="display: none;">
+                        <p class="main-heading fs-4 fw-semibold">Bulk Upload</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <button class="choosebtn py-2"> Choose file</button>
+                            <p class="main-heading fs-5">No file choose</p>
+                        </div>
+                        <p class="main-heading fs-5 pt-4">One domain per row (.xls file)</p>
+
+                    </div>
+                    <button class="submitbtn bg-primary py-3 px-5 rounded-3 text-white fw-semibold  mb-5 ">Submit</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

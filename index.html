@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger ">
+            <div class="container-fluid flex-nowrap ">
+                <!-- toggler -->
+                <button class="btn float-end showMenuIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                    role="button">
+                    <i class="bi bi-list fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+                </button>
+                <img src="./assets/arrowHeader.svg" alt="" width="50px" height="50px">
+
+                <div class="ms-auto d-flex align-items-center">
+                    <!-- Notification Icon -->
+                    <div class=" me-4">
+                        <img src="/assets/bell.svg" alt="">
+                       
+                    </div>
+
+                    <!-- User Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle custom-dropdown-toggle d-flex" type="button"
+                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/assets/sheba.svg" alt="User" class="rounded-2 me-3" width="50px" height="50px">
+                            <div>
+                                <h6 class="m-0 me-3">Sehba</h6>
+                                <p class="text-start">user</p>
+                            </div>
+                            <div class="mt-3 ms-2"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></div>
+                        </button>
+
+                        <div class="dropdown-menu dropdown-menu-end " style="width: 218px;">
+                            <div class=" d-flex  justify-content-center">
+                                <a href="buyer.html">
+
+                                    <button class="buyer-bth">Switch to buyer</button>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between align-content-center p-3">
+                                <p class="dropdown-item p-0 m-0">1212 Pending Task</p>
+                                <img src="/assets/clock1.svg" alt="dashboard">
+                            </div>
+                            <ul class=" list-unstyled">
+                                <hr class=" mx-3">
+                                <li><a class="dropdown-item" href="#">Accounting</a></li>
+                                <li><a class="dropdown-item" href="#">Accounting</a></li>
+                                <li><a class="dropdown-item" href="#">Projects</a></li>
+                                <li><a class="dropdown-item" href="#">Projects</a></li>
+                                <hr class=" mx-3">
+                                <li><a class="dropdown-item" href="account-setting.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="offcanvas" data-bs-keyboard="false"
+                data-bs-backdrop="false">
+                <div class="offcanvas-header">
+                    <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body px-0 ">
+                    <div class="SidebarMenus">
+                        <ul class=" m-0 p-0">
+                            <!-- Dashboard -->
+                            <li class="active">
+                                <a href="index.html" class=" d-flex gap-2">
+                                    <img src="/assets/homeside.svg" alt="dashboard"> <span class="">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <!-- My Domains -->
+                            <li>
+                                <a href="#domainSubmenu" data-bs-toggle="collapse"
+                                    class="d-flex justify-content-between align-items-center">
+                                    <div class=" sideimg d-flex gap-2">
+                                        <img src="/assets/domain.svg" alt="domain"> <span class="">My
+                                            Domains</span>
+                                    </div>
+                                    <i class="bi bi-chevron-down "></i>
+                                </a>
+                                <ul class="collapse list-unstyled" id="domainSubmenu">
+                                    <li>
+                                        <a href="domains-sales.html">
+                                            <span class="dot"></span> <span>Domains Sales</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="domains-bulk.html">
+                                            <span class="dot"></span> <span>Domains Bulk</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="domains-rent.html">
+                                            <span class="dot"></span> <span>Domains Rent</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="domains-sold.html">
+                                            <span class="dot"></span> <span>Domains Sold</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Sales -->
+                            <li>
+                                <a href="#salesSubmenu" data-bs-toggle="collapse"
+                                    class="d-flex justify-content-between align-items-center">
+                                    <div class=" d-flex gap-2">
+                                        <img class="sideimg" src="/assets/sales.svg" alt="sales"> <span
+                                            class="sideHeadings">Sales</span>
+                                    </div>
+                                    <i class="bi bi-chevron-down "></i>
+                                </a>
+                                <ul class="collapse list-unstyled" id="salesSubmenu">
+                                    <li>
+                                        <a href="sales-active.html">
+                                            <span class="dot"></span> <span>Sales Active</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sales-unconfirmed.html">
+                                            <span class="dot"></span> <span>Sales Unconfirmed</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sales-archived.html">
+                                            <span class="dot"></span> <span>Sales Archived</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Finance -->
+                            <li>
+                                <a href="#financeSubmenu" data-bs-toggle="collapse"
+                                    class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex gap-3">
+                                        <img class="sideimg" src="/assets/finance.svg" alt="settings"> <span
+                                            class="sideHeadings">Finance</span>
+                                    </div>
+                                    <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <ul class="collapse list-unstyled" id="financeSubmenu">
+                                    <li>
+                                        <a href="finance.html">
+                                            <span class="dot"></span> <span>Finance Details</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <!-- Settings -->
+                            <li>
+                                <a href="#settingsSubmenu" data-bs-toggle="collapse"
+                                    class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex gap-3">
+                                        <img class="sideimg" src="/assets/settings.svg" alt="settings"> <span
+                                            class="sideHeadings">Settings</span>
+                                    </div>
+                                    <i class="bi bi-chevron-down "></i>
+                                </a>
+                                <ul class="collapse list-unstyled" id="settingsSubmenu">
+                                    <li>
+                                        <a href="account-setting.html">
+                                            <span class="dot"></span> <span>Account Setting</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sale-page.html">
+                                            <span class="dot"></span><span>Sale Page</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="payout-setting.html">
+                                            <span class="dot"></span><span>Payout Setting</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="privacy.html">
+                                            <span class="dot"></span> <span>Privacy</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </nav>
+
+
+        <div class="d-flex ">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="sidebar">
+                <ul class="list-unstyled components m-0 p-0">
+                    <!-- Dashboard -->
+                    <li class="active">
+                        <a href="index.html" class=" d-flex gap-2">
+                            <img src="/assets/home.svg" alt="dashboard"> <span class="sideHeadings">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <!-- My Domains -->
+                    <li>
+                        <a href="#domainSubmenu" data-bs-toggle="collapse"
+                            class="d-flex justify-content-between align-items-center">
+                            <div class=" sideimg d-flex gap-2">
+                                <img src="/assets/domain.svg" alt="domain"> <span class="sideHeadings">My Domains</span>
+                            </div>
+                            <i class="bi bi-chevron-down sideicon "></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="domainSubmenu">
+                            <li>
+                                <a href="domains-sales.html">
+                                    <span class="dot"></span> <span> Sales</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="domains-bulk.html">
+                                    <span class="dot"></span> <span> Bulk</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="domains-rent.html">
+                                    <span class="dot"></span> <span> Rent</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="domains-sold.html">
+                                    <span class="dot"></span> <span> Sold</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Sales -->
+                    <li>
+                        <a href="#salesSubmenu" data-bs-toggle="collapse"
+                            class="d-flex justify-content-between align-items-center">
+                            <div class=" d-flex gap-2">
+                                <img class="sideimg" src="/assets/sales.svg" alt="sales"> <span
+                                    class="sideHeadings">Sales</span>
+                            </div>
+                            <i class="bi bi-chevron-down sideicon"></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="salesSubmenu">
+                            <li>
+                                <a href="sales-active.html">
+                                    <span class="dot"></span> <span>Active</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sales-unconfirmed.html">
+                                    <span class="dot"></span> <span>Unconfirmed</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sales-archived.html">
+                                    <span class="dot"></span> <span>Archived</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Finance -->
+
+                    <li>
+                        <a href="#financeSubmenu" data-bs-toggle="collapse"
+                            class="d-flex justify-content-between align-items-center ">
+                            <div class="d-flex gap-3">
+                                <img class="sideimg" src="/assets/finance.svg" alt="settings"> <span
+                                    class="sideHeadings">Finance</span>
+                            </div>
+                            <i class="bi bi-chevron-down sideicon"></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="financeSubmenu">
+                            <li>
+                                <a href="finance.html">
+                                    <span class="dot"></span> <span>Revenue Details</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <!-- Settings -->
+                    <li>
+                        <a href="#settingsSubmenu" data-bs-toggle="collapse"
+                            class="d-flex justify-content-between align-items-center ">
+                            <div class="d-flex gap-3">
+                                <img class="sideimg" src="/assets/settings.svg" alt="settings"> <span
+                                    class="sideHeadings">Settings</span>
+                            </div>
+                            <i class="bi bi-chevron-down sideicon"></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="settingsSubmenu">
+                            <li>
+                                <a href="account-setting.html">
+                                    <span class="dot"></span> <span>Account Setting</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sale-page.html">
+                                    <span class="dot"></span> <span>Sale Page</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="payout-setting.html">
+                                    <span class="dot"></span> <span>Payout Setting</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="privacy.html">
+                                    <span class="dot"></span> <span>Privacy</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+              
+            </nav>
+
+
+
+            <!-- Page Content -->
+            <div id="content">
+                <!-- Dashboard Content -->
+                <div class=" p-2 p-md-3">
+                    <div>
+                        <h1 class="mb-1 topheading">Dashboard</h1>
+                        <small class="toptitle">Dashboard</small>
+                    </div>
+                    <!-- Stats Cards -->
+
+
+                    <div class="d-flex flex-column flex-md-row flex-wrap gap-lg-4 gap-md-2 my-3">
+                        <div class="card w-lg-25 w-sm-auto" style="max-width: 600px;">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div style="background-color: #e6e8ec; border-radius: 10px; padding: 10px;">
+                                        <img src="/assets/Frame (3).svg" alt="img2" width="30" height="30">
+                                    </div>
+                                    <div>
+                                        <p class="text-muted ">Domains for sale</p>
+                                        <h2 class="text-center">999999999</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card w-lg-25 w-sm-auto" style="max-width: 600px;">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div style="background-color: #e6e8ec; border-radius: 10px; padding: 10px;">
+                                        <img src="/assets/Vector.svg" alt="img2" width="30" height="30">
+                                    </div>
+                                    <div>
+                                       <p class="text-muted ">Domains for sale</p>
+                                        <h2 class="text-center">999999999</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card w-lg-25 w-sm-auto" style="max-width: 600px;">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div style="background-color: #e6e8ec; border-radius: 10px; padding: 10px;">
+                                        <img src="/assets/Frame (4).svg" alt="img2" width="30" height="30">
+                                    </div>
+                                    <div>
+                                       <p class="text-muted ">Domains for sale</p>
+                                        <h2 class="text-center">999999999</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="  row ">
+                        <div class=" col-sm-8 col-md-6  col-lg-4">
+                            <!-- renew -->
+                            <div>
+                                <div class="card">
+                                    <div class="card-body pb-2">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                            <h5 class="headingcolor card-title pb-2">Revenue</h5>
+                                            <button class="btn btn-sm btn-custom-shadow px-2 py-2 mb-4">
+                                                <img src="/assets/clander.svg" alt="clander">
+                                                <i class="bi bi-chevron-down ms-1"></i>
+                                            </button>
+                                        </div>
+                                        <div class="revenue-stats">
+                                            <div class="">
+                                                <div class="d-flex text-center justify-content-between">
+                                                    <p class="color mb-0">Total domains</p>
+                                                    <h6 class="color">$50000 </h6>
+                                                </div>
+                                                <div class="d-flex text-center justify-content-between">
+                                                    <p class="text-muted">over all</p>
+                                                    <p class="text-muted">USD</p>
+                                                </div>
+                                            </div>
+                                            <div class=" ">
+                                                <div class="d-flex text-center justify-content-between">
+                                                    <p class="color mb-0">Total domains</p>
+                                                    <h6 class="color">$50000 </h6>
+                                                </div>
+                                                <div class="d-flex text-center justify-content-between">
+                                                    <p class="text-muted">over all</p>
+                                                    <p class="text-muted">USD</p>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <div class="d-flex text-center justify-content-between">
+                                                    <p class="color mb-0">Total domains</p>
+                                                    <h6 class="color">$50000 </h6>
+                                                </div>
+                                                <div class="d-flex text-center justify-content-between">
+                                                    <p class="text-muted">over all</p>
+                                                    <p class="text-muted">USD</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="traffic-card card">
+                                    <h5 class="headingcolor card-title">Traffic Overview</h5>
+                                    <div class="chart-container">
+                                        <canvas id="trafficChart"></canvas>
+                                        <div class="total-visits">
+                                            <h6 class="">Total Visits</h6>
+                                            <h3 class="visits-number">10,000</h3>
+                                        </div>
+                                    </div>
+                                    <div class="traffic-sources mt-4">
+                                        <!-- First Row -->
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <div class="d-flex flex-column">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="dot direct"></span>
+                                                    <h6>Direct Visits</h6>
+                                                </div>
+                                                <p class="ps-4 mb-0">12%</p>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="dot search"></span>
+                                                    <h6>Search Engines</h6>
+                                                </div>
+                                                <p class="ps-4 mb-0">20%</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Second Row -->
+                                        <div class="d-flex justify-content-between">
+                                            <div class="d-flex flex-column">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="dot referral"></span>
+                                                    <h6>Referrals</h6>
+                                                </div>
+                                                <p class="ps-4 mb-0">18%</p>
+                                            </div>
+                                            <div class="d-flex flex-column " style="margin-right: 45px;">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="dot paid"></span>
+                                                    <h6>Paid Ads</h6>
+                                                </div>
+                                                <p class="ps-4 mb-0">70%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <h5 class="headingcolor card-title ">Latest News</h5>
+                                        <div class=" border-bottom pt-4">
+                                            <div class=" d-flex gap-2 ">
+                                                <div>
+                                                    <img src="/assets/box.svg" alt="boxx" width="50" height="50">
+                                                </div>
+                                                <p class=" newspara">Top 10 Most Expensive Domains Sold This Month</p>
+                                            </div>
+                                            <p class="para2">Discover the high-profile domain sales that made headlines
+                                                this
+                                                month, including jaw-dropping
+                                                six-figure deals.</p>
+                                            <div class=" dayAgo d-flex justify-content-between">
+                                                <p>1 day ago</p>
+                                                <p class=" fw-bold">Read More →</p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" border-bottom pt-4">
+                                            <div class=" d-flex gap-2 ">
+                                                <div>
+                                                    <img src="/assets/box.svg" alt="boxx" width="50" height="50">
+                                                </div>
+                                                <p class=" newspara">New Feature Alert: Real-Time Traffic Analytics Now
+                                                    Available</p>
+                                            </div>
+                                            <p class="para2">Sellers can now access real-time data on domain traffic to
+                                                make
+                                                smarter pricing decisions.</p>
+                                            <div class=" dayAgo d-flex justify-content-between">
+                                                <p>1 day ago</p>
+                                                <p class=" fw-bold">Read More →</p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" border-bottom pt-4">
+                                            <div class=" d-flex gap-2 ">
+                                                <div>
+                                                    <img src="/assets/box.svg" alt="boxx" width="50" height="50">
+                                                </div>
+                                                <p class=" newspara">5 Expert Tips to Boost Your Domain Sale Price</p>
+                                            </div>
+                                            <p class="para2">Want to increase the value of your domains? Learn proven
+                                                strategies
+                                                from our expert brokers to boost your ROI.</p>
+                                            <div class=" dayAgo d-flex justify-content-between">
+                                                <p>1 day ago</p>
+                                                <p class=" fw-bold">Read More →</p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" border-bottom pt-4">
+                                            <div class=" d-flex gap-2 ">
+                                                <div>
+                                                    <img src="/assets/box.svg" alt="boxx" width="50" height="50">
+                                                </div>
+                                                <p class=" newspara">ICANN Introduces New Rules for Domain Transfers</p>
+                                            </div>
+                                            <p class="para2">Stay compliant with ICANN's latest policy changes affecting
+                                                domain
+                                                transfers. Here's what you need to know.</p>
+                                            <div class=" dayAgo d-flex justify-content-between">
+                                                <p>1 day ago</p>
+                                                <p class=" fw-bold">Read More →</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-8 col-md-6  col-lg-8">
+                            <div>
+                                <div class="leads-container card">
+                                    <div class="d-flex justify-content-between align-items-center ">
+                                        <h5 class="headingcolor card-title pb-2">Leads</h5>
+                                        <button class="btn  btn-sm btn-custom-shadow  mb-4">
+                                            <img src="/assets/clander.svg" alt="clander">
+                                            This Month
+                                            <i class="bi bi-chevron-down ms-1"></i>
+                                        </button>
+                                    </div>
+                                    <canvas id="leadsChart"></canvas>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="headingcolor card-title">Trending Domains</h5>
+                                        <div class="trending-domains">
+                                            <div
+                                                class="domain-item d-flex justify-content-between align-items-center mb-4 flex-wrap flex-lg-nowrap ">
+                                                <div>
+                                                    <h6 class="domain-title">techstartups.org</h6>
+                                                    <small class="text-muted">Brandable</small>
+                                                </div>
+                                                <button class="btn explorbtn btn-sm">Explore</button>
+                                            </div>
+
+                                            <div
+                                                class="domain-item d-flex justify-content-between align-items-center mb-4 flex-wrap flex-lg-nowrap">
+                                                <div>
+                                                    <h6 class="domain-title">techstartups.org</h6>
+                                                    <small class="text-muted">Brandable</small>
+                                                </div>
+                                                <button class="btn explorbtn btn-sm">Explore</button>
+                                            </div>
+
+                                            <div
+                                                class="domain-item d-flex justify-content-between align-items-center mb-4 flex-wrap flex-lg-nowrap">
+                                                <div>
+                                                    <h6 class="domain-title">techstartups.org</h6>
+                                                    <small class="text-muted">Brandable</small>
+                                                </div>
+                                                <button class="btn explorbtn btn-sm">Explore</button>
+                                            </div>
+
+                                            <div
+                                                class="domain-item d-flex justify-content-between align-items-center flex-wrap flex-lg-nowrap">
+                                                <div>
+                                                    <h6 class="domain-title">techstartups.org</h6>
+                                                    <small class="text-muted">Brandable</small>
+                                                </div>
+                                                <button class="btn explorbtn btn-sm">Explore</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="headingcolor card-title pb-2">Recently listed Domins</h5>
+                                        <div class="trending-domains">
+                                            <div
+                                                class="domain-item d-flex justify-content-between align-items-center mb-4 flex-wrap flex-lg-nowrap">
+                                                <div>
+                                                    <h6 class="domain-title">techstartups.org</h6>
+                                                    <small class="text-muted">Brandable</small>
+                                                </div>
+                                                <button class="btn explorbtn btn-sm">Explore</button>
+                                            </div>
+
+                                            <div
+                                                class="domain-item d-flex justify-content-between align-items-center mb-4 flex-wrap flex-lg-nowrap">
+                                                <div>
+                                                    <h6 class="domain-title">techstartups.org</h6>
+                                                    <small class="text-muted">Brandable</small>
+                                                </div>
+                                                <button class="btn explorbtn btn-sm">Explore</button>
+                                            </div>
+
+                                            <div
+                                                class="domain-item d-flex justify-content-between align-items-center mb-4 flex-wrap flex-lg-nowrap">
+                                                <div>
+                                                    <h6 class="domain-title">techstartups.org</h6>
+                                                    <small class="text-muted">Brandable</small>
+                                                </div>
+                                                <button class="btn explorbtn btn-sm">Explore</button>
+                                            </div>
+
+                                            <div
+                                                class="domain-item d-flex justify-content-between align-items-center mb-4 flex-wrap flex-lg-nowrap">
+                                                <div>
+                                                    <h6 class="domain-title">techstartups.org</h6>
+                                                    <small class="text-muted">Brandable</small>
+                                                </div>
+                                                <button class="btn explorbtn btn-sm">Explore</button>
+                                            </div>
+                                            <div
+                                                class="domain-item d-flex justify-content-between align-items-center mb-4 flex-wrap flex-lg-nowrap">
+                                                <div>
+                                                    <h6 class="domain-title">techstartups.org</h6>
+                                                    <small class="text-muted">Brandable</small>
+                                                </div>
+                                                <button class="btn explorbtn btn-sm">Explore</button>
+                                            </div>
+
+                                            <div
+                                                class="domain-item d-flex justify-content-between align-items-center flex-wrap flex-lg-nowrap">
+                                                <div>
+                                                    <h6 class="domain-title">techstartups.org</h6>
+                                                    <small class="text-muted">Brandable</small>
+                                                </div>
+                                                <button class="btn explorbtn btn-sm">Explore</button>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>

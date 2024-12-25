@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Rent</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger ">
+            <div class="container-fluid flex-nowrap ">
+                <!-- toggler -->
+                <button class="btn float-end showMenuIcon" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                    role="button">
+                    <i class="bi bi-list fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+                </button>
+                <img src="./assets/arrowHeader.svg" alt="" width="50px" height="50px">
+
+                <div class="ms-auto d-flex align-items-center">
+                    <!-- Notification Icon -->
+                    <div class=" me-4">
+                        <img src="/assets/bell.svg" alt="">
+
+                    </div>
+
+                    <!-- User Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle custom-dropdown-toggle d-flex" type="button"
+                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/assets/sheba.svg" alt="User" class="rounded-2 me-3" width="50px" height="50px">
+                            <div>
+                                <h6 class="m-0 me-3">Sehba</h6>
+                                <p class="text-start">user</p>
+                            </div>
+                            <div class="mt-3 ms-2"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></div>
+                        </button>
+
+                        <div class="dropdown-menu dropdown-menu-end " style="width: 218px;">
+                            <div class=" d-flex  justify-content-center">
+                                <a href="buyer.html">
+
+                                    <button class="buyer-bth">Switch to buyer</button>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between align-content-center p-3">
+                                <p class="dropdown-item p-0 m-0">1212 Pending Task</p>
+                                <img src="/assets/clock1.svg" alt="dashboard">
+                            </div>
+                            <ul class=" list-unstyled">
+                                <hr class=" mx-3">
+                                <li><a class="dropdown-item" href="#">Accounting</a></li>
+                                <li><a class="dropdown-item" href="#">Accounting</a></li>
+                                <li><a class="dropdown-item" href="#">Projects</a></li>
+                                <li><a class="dropdown-item" href="#">Projects</a></li>
+                                <hr class=" mx-3">
+                                <li><a class="dropdown-item" href="account-setting.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="offcanvas" data-bs-keyboard="false"
+                data-bs-backdrop="false">
+                <div class="offcanvas-header">
+                    <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body px-0 ">
+                    <div class="SidebarMenus">
+                        <ul class=" m-0 p-0">
+                            <!-- Dashboard -->
+                            <li class="active">
+                                <a href="index.html" class=" d-flex gap-2">
+                                    <img src="/assets/homeside.svg" alt="dashboard"> <span class="">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <!-- My Domains -->
+                            <li>
+                                <a href="#domainSubmenu" data-bs-toggle="collapse"
+                                    class="d-flex justify-content-between align-items-center">
+                                    <div class=" sideimg d-flex gap-2">
+                                        <img src="/assets/domain.svg" alt="domain"> <span class="">My
+                                            Domains</span>
+                                    </div>
+                                    <i class="bi bi-chevron-down "></i>
+                                </a>
+                                <ul class="collapse list-unstyled" id="domainSubmenu">
+                                    <li>
+                                        <a href="domains-sales.html">
+                                            <span class="dot"></span> <span>Domains Sales</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="domains-bulk.html">
+                                            <span class="dot"></span> <span>Domains Bulk</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="domains-rent.html">
+                                            <span class="dot"></span> <span>Domains Rent</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="domains-sold.html">
+                                            <span class="dot"></span> <span>Domains Sold</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Sales -->
+                            <li>
+                                <a href="#salesSubmenu" data-bs-toggle="collapse"
+                                    class="d-flex justify-content-between align-items-center">
+                                    <div class=" d-flex gap-2">
+                                        <img class="sideimg" src="/assets/sales.svg" alt="sales"> <span
+                                            class="sideHeadings">Sales</span>
+                                    </div>
+                                    <i class="bi bi-chevron-down "></i>
+                                </a>
+                                <ul class="collapse list-unstyled" id="salesSubmenu">
+                                    <li>
+                                        <a href="sales-active.html">
+                                            <span class="dot"></span> <span>Sales Active</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sales-unconfirmed.html">
+                                            <span class="dot"></span> <span>Sales Unconfirmed</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sales-archived.html">
+                                            <span class="dot"></span> <span>Sales Archived</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Finance -->
+                            <li>
+                                <a href="#financeSubmenu" data-bs-toggle="collapse"
+                                    class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex gap-3">
+                                        <img class="sideimg" src="/assets/finance.svg" alt="settings"> <span
+                                            class="sideHeadings">Finance</span>
+                                    </div>
+                                    <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <ul class="collapse list-unstyled" id="financeSubmenu">
+                                    <li>
+                                        <a href="finance.html">
+                                            <span class="dot"></span> <span>Finance Details</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <!-- Settings -->
+                            <li>
+                                <a href="#settingsSubmenu" data-bs-toggle="collapse"
+                                    class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex gap-3">
+                                        <img class="sideimg" src="/assets/settings.svg" alt="settings"> <span
+                                            class="sideHeadings">Settings</span>
+                                    </div>
+                                    <i class="bi bi-chevron-down "></i>
+                                </a>
+                                <ul class="collapse list-unstyled" id="settingsSubmenu">
+                                    <li>
+                                        <a href="account-setting.html">
+                                            <span class="dot"></span> <span>Account Setting</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sale-page.html">
+                                            <span class="dot"></span><span>Sale Page</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="payout-setting.html">
+                                            <span class="dot"></span><span>Payout Setting</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="privacy.html">
+                                            <span class="dot"></span> <span>Privacy</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </nav>
+
+
+        <div class="d-flex">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="sidebar">
+                <ul class="list-unstyled components m-0 p-0">
+                    <!-- Dashboard -->
+                    <li class="active">
+                        <a href="index.html" class=" d-flex gap-2">
+                            <img src="/assets/home.svg" alt="dashboard"> <span class="sideHeadings">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <!-- My Domains -->
+                    <li>
+                        <a href="#domainSubmenu" data-bs-toggle="collapse"
+                            class="d-flex justify-content-between align-items-center">
+                            <div class=" sideimg d-flex gap-2">
+                                <img src="/assets/domain.svg" alt="domain"> <span class="sideHeadings">My Domains</span>
+                            </div>
+                            <i class="bi bi-chevron-down sideicon "></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="domainSubmenu">
+                            <li>
+                                <a href="domains-sales.html">
+                                    <span class="dot"></span> <span> Sales</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="domains-bulk.html">
+                                    <span class="dot"></span> <span> Bulk</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="domains-rent.html">
+                                    <span class="dot"></span> <span> Rent</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="domains-sold.html">
+                                    <span class="dot"></span> <span> Sold</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Sales -->
+                    <li>
+                        <a href="#salesSubmenu" data-bs-toggle="collapse"
+                            class="d-flex justify-content-between align-items-center">
+                            <div class=" d-flex gap-2">
+                                <img class="sideimg" src="/assets/sales.svg" alt="sales"> <span
+                                    class="sideHeadings">Sales</span>
+                            </div>
+                            <i class="bi bi-chevron-down sideicon"></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="salesSubmenu">
+                            <li>
+                                <a href="sales-active.html">
+                                    <span class="dot"></span> <span>Active</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sales-unconfirmed.html">
+                                    <span class="dot"></span> <span>Unconfirmed</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sales-archived.html">
+                                    <span class="dot"></span> <span>Archived</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Finance -->
+
+                    <li>
+                        <a href="#financeSubmenu" data-bs-toggle="collapse"
+                            class="d-flex justify-content-between align-items-center ">
+                            <div class="d-flex gap-3">
+                                <img class="sideimg" src="/assets/finance.svg" alt="settings"> <span
+                                    class="sideHeadings">Finance</span>
+                            </div>
+                            <i class="bi bi-chevron-down sideicon"></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="financeSubmenu">
+                            <li>
+                                <a href="finance.html">
+                                    <span class="dot"></span> <span>Revenue Details</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <!-- Settings -->
+                    <li>
+                        <a href="#settingsSubmenu" data-bs-toggle="collapse"
+                            class="d-flex justify-content-between align-items-center ">
+                            <div class="d-flex gap-3">
+                                <img class="sideimg" src="/assets/settings.svg" alt="settings"> <span
+                                    class="sideHeadings">Settings</span>
+                            </div>
+                            <i class="bi bi-chevron-down sideicon"></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="settingsSubmenu">
+                            <li>
+                                <a href="account-setting.html">
+                                    <span class="dot"></span> <span>Account Setting</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sale-page.html">
+                                    <span class="dot"></span> <span>Sale Page</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="payout-setting.html">
+                                    <span class="dot"></span> <span>Payout Setting</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="privacy.html">
+                                    <span class="dot"></span> <span>Privacy</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+            <!-- Page Content -->
+            <div id="content">
+
+
+                <div class="header-container">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap flex-lg-nowrap">
+                            <div>
+                                <h4 class="mb-1 topheading">My Domains</h4>
+                                <small class="text-muted toptitle">Rented Domains</small>
+                            </div>
+                            <div class="d-flex flex-column  gap-3 mt-3 mt-sm-0 ">
+                                <div class="search-container">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control search-input"
+                                            placeholder="Search for your ideal domain...">
+                                        <button class=" px-3 search-button">
+                                            <img src="/assets//Group.svg" alt="search button">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container my-4 mx-0">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="checkbox-column">
+                                        <button class="btn dropdown-toggle custom-dropdown-toggle" type="button"
+                                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <input type="checkbox" class="form-check-input domain-checkbox">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <!-- Close Icon -->
+                                            <li class="dropdown-header d-flex justify-content-start align-items-center">
+                                                <button type="button" class="btn-close ms-2" aria-label="Close" data-bs-dismiss="dropdown"></button>
+                                            </li>
+                                            
+                                            <!-- Dropdown Items -->
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Domains selected</span>
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#pricingsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Pricing</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#salesModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Sales page</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Delete</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#importLeadsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Import leads</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </th>
+
+                                    <th>Domain Name</th>
+                                    <th>Renter Name</th>
+                                    <th>Rental Price</th>
+                                    <th>Rental Period</th>
+                                    <th>Date listed</th>
+                                    <th>Status</th>
+                                    <th>Views</th>
+                                    <th>Leads</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="checkbox-column">
+                                        <button class="btn dropdown-toggle custom-dropdown-toggle" type="button"
+                                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <input type="checkbox" class="form-check-input domain-checkbox">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <!-- Close Icon -->
+                                            <li class="dropdown-header d-flex justify-content-start align-items-center">
+                                                <button type="button" class="btn-close ms-2" aria-label="Close" data-bs-dismiss="dropdown"></button>
+                                            </li>
+                                            
+                                            <!-- Dropdown Items -->
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Domains selected</span>
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#pricingsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Pricing</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#salesModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Sales page</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Delete</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#importLeadsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Import leads</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>techstartups.org</td>
+                                    <td>Mike</td>
+                                    <td>$ 500,000</td>
+                                    <td>12/12/2022 to 12/12/2022</td>
+                                    <td>12/12/2024</td>
+                                    <td><span class="status-badge status-active">Active</span></td>
+                                    <td>12000</td>
+                                    <td>12000</td>
+                                    <td>
+                                        <!-- Dropdown button with arrow -->
+                                        <button class="btn px-2 py-2 domain-item dropdown-toggle custom-dropdown-toggle"
+                                            type="button" id="userDropdown" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>View Details</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Renew Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Terminate Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+
+                                        </ul>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-column">
+                                        <button class="btn dropdown-toggle custom-dropdown-toggle" type="button"
+                                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <input type="checkbox" class="form-check-input domain-checkbox">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <!-- Close Icon -->
+                                            <li class="dropdown-header d-flex justify-content-start align-items-center">
+                                                <button type="button" class="btn-close ms-2" aria-label="Close" data-bs-dismiss="dropdown"></button>
+                                            </li>
+                                            
+                                            <!-- Dropdown Items -->
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Domains selected</span>
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#pricingsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Pricing</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#salesModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Sales page</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Delete</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#importLeadsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Import leads</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>techstartups.org</td>
+                                    <td>Mike</td>
+                                    <td>$ 500,000</td>
+                                    <td>12/12/2022 to 12/12/2022</td>
+                                    <td>12/12/2024</td>
+                                    <td><span class="status-badge status-expiring">expiring</span></td>
+                                    <td>12000</td>
+                                    <td>12000</td>
+                                    <td>
+                                        <!-- Dropdown button with arrow -->
+                                        <button class="btn px-2 py-2 domain-item dropdown-toggle custom-dropdown-toggle"
+                                            type="button" id="userDropdown" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>View Details</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Renew Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Terminate Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+
+                                        </ul>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-column">
+                                        <button class="btn dropdown-toggle custom-dropdown-toggle" type="button"
+                                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <input type="checkbox" class="form-check-input domain-checkbox">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <!-- Close Icon -->
+                                            <li class="dropdown-header d-flex justify-content-start align-items-center">
+                                                <button type="button" class="btn-close ms-2" aria-label="Close" data-bs-dismiss="dropdown"></button>
+                                            </li>
+                                            
+                                            <!-- Dropdown Items -->
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Domains selected</span>
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#pricingsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Pricing</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#salesModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Sales page</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Delete</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#importLeadsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Import leads</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>techstartups.org</td>
+                                    <td>Mike</td>
+                                    <td>$ 500,000</td>
+                                    <td>12/12/2022 to 12/12/2022</td>
+                                    <td>12/12/2024</td>
+                                    <td><span class="status-badge status-pending">pending</span></td>
+                                    <td>12000</td>
+                                    <td>12000</td>
+                                    <td>
+                                        <!-- Dropdown button with arrow -->
+                                        <button class="btn px-2 py-2 domain-item dropdown-toggle custom-dropdown-toggle"
+                                            type="button" id="userDropdown" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>View Details</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Renew Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Terminate Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-column">
+                                        <button class="btn dropdown-toggle custom-dropdown-toggle" type="button"
+                                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <input type="checkbox" class="form-check-input domain-checkbox">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <!-- Close Icon -->
+                                            <li class="dropdown-header d-flex justify-content-start align-items-center">
+                                                <button type="button" class="btn-close ms-2" aria-label="Close" data-bs-dismiss="dropdown"></button>
+                                            </li>
+                                            
+                                            <!-- Dropdown Items -->
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Domains selected</span>
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#pricingsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Pricing</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#salesModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Sales page</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Delete</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#importLeadsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Import leads</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>techstartups.org</td>
+                                    <td>Mike</td>
+                                    <td>$ 500,000</td>
+                                    <td>12/12/2022 to 12/12/2022</td>
+                                    <td>12/12/2024</td>
+                                    <td><span class="status-badge status-active">Active</span></td>
+                                    <td>12000</td>
+                                    <td>12000</td>
+                                    <td>
+                                        <!-- Dropdown button with arrow -->
+                                        <button class="btn px-2 py-2 domain-item dropdown-toggle custom-dropdown-toggle"
+                                            type="button" id="userDropdown" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>View Details</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Renew Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Terminate Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-column">
+                                        <button class="btn dropdown-toggle custom-dropdown-toggle" type="button"
+                                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <input type="checkbox" class="form-check-input domain-checkbox">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <!-- Close Icon -->
+                                            <li class="dropdown-header d-flex justify-content-start align-items-center">
+                                                <button type="button" class="btn-close ms-2" aria-label="Close" data-bs-dismiss="dropdown"></button>
+                                            </li>
+                                            
+                                            <!-- Dropdown Items -->
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Domains selected</span>
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#pricingsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Pricing</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#salesModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Sales page</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Delete</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#importLeadsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Import leads</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>techstartups.org</td>
+                                    <td>Mike</td>
+                                    <td>$ 500,000</td>
+                                    <td>12/12/2022 to 12/12/2022</td>
+                                    <td>12/12/2024</td>
+                                    <td><span class="status-badge status-expiring">expiring</span></td>
+                                    <td>12000</td>
+                                    <td>12000</td>
+                                    <td>
+                                        <!-- Dropdown button with arrow -->
+                                        <button class="btn px-2 py-2 domain-item dropdown-toggle custom-dropdown-toggle"
+                                            type="button" id="userDropdown" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>View Details</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Renew Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Terminate Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+
+                                        </ul>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-column">
+                                        <button class="btn dropdown-toggle custom-dropdown-toggle" type="button"
+                                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <input type="checkbox" class="form-check-input domain-checkbox">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <!-- Close Icon -->
+                                            <li class="dropdown-header d-flex justify-content-start align-items-center">
+                                                <button type="button" class="btn-close ms-2" aria-label="Close" data-bs-dismiss="dropdown"></button>
+                                            </li>
+                                            
+                                            <!-- Dropdown Items -->
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Domains selected</span>
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#pricingsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Pricing</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#salesModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Sales page</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Delete</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#importLeadsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Import leads</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>techstartups.org</td>
+                                    <td>Mike</td>
+                                    <td>$ 500,000</td>
+                                    <td>12/12/2022 to 12/12/2022</td>
+                                    <td>12/12/2024</td>
+                                    <td><span class="status-badge status-pending">pending</span></td>
+                                    <td>12000</td>
+                                    <td>12000</td>
+                                    <td>
+                                        <!-- Dropdown button with arrow -->
+                                        <button class="btn px-2 py-2 domain-item dropdown-toggle custom-dropdown-toggle"
+                                            type="button" id="userDropdown" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>View Details</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Renew Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Terminate Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-column">
+                                        <button class="btn dropdown-toggle custom-dropdown-toggle" type="button"
+                                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <input type="checkbox" class="form-check-input domain-checkbox">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <!-- Close Icon -->
+                                            <li class="dropdown-header d-flex justify-content-start align-items-center">
+                                                <button type="button" class="btn-close ms-2" aria-label="Close" data-bs-dismiss="dropdown"></button>
+                                            </li>
+                                            
+                                            <!-- Dropdown Items -->
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Domains selected</span>
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#pricingsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Pricing</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#salesModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Sales page</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Delete</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#importLeadsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Import leads</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>techstartups.org</td>
+                                    <td>Mike</td>
+                                    <td>$ 500,000</td>
+                                    <td>12/12/2022 to 12/12/2022</td>
+                                    <td>12/12/2024</td>
+                                    <td><span class="status-badge status-pending">pending</span></td>
+                                    <td>12000</td>
+                                    <td>12000</td>
+                                    <td>
+                                        <!-- Dropdown button with arrow -->
+                                        <button class="btn px-2 py-2 domain-item dropdown-toggle custom-dropdown-toggle"
+                                            type="button" id="userDropdown" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>View Details</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Renew Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Terminate Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-column">
+                                        <button class="btn dropdown-toggle custom-dropdown-toggle" type="button"
+                                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <input type="checkbox" class="form-check-input domain-checkbox">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <!-- Close Icon -->
+                                            <li class="dropdown-header d-flex justify-content-start align-items-center">
+                                                <button type="button" class="btn-close ms-2" aria-label="Close" data-bs-dismiss="dropdown"></button>
+                                            </li>
+                                            
+                                            <!-- Dropdown Items -->
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Domains selected</span>
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#pricingsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Pricing</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#salesModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Sales page</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Delete</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#importLeadsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Import leads</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>techstartups.org</td>
+                                    <td>Mike</td>
+                                    <td>$ 500,000</td>
+                                    <td>12/12/2022 to 12/12/2022</td>
+                                    <td>12/12/2024</td>
+                                    <td><span class="status-badge status-active">Active</span></td>
+                                    <td>12000</td>
+                                    <td>12000</td>
+                                    <td>
+                                        <!-- Dropdown button with arrow -->
+                                        <button class="btn px-2 py-2 domain-item dropdown-toggle custom-dropdown-toggle"
+                                            type="button" id="userDropdown" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>View Details</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Renew Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Terminate Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-column">
+                                        <button class="btn dropdown-toggle custom-dropdown-toggle" type="button"
+                                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <input type="checkbox" class="form-check-input domain-checkbox">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <!-- Close Icon -->
+                                            <li class="dropdown-header d-flex justify-content-start align-items-center">
+                                                <button type="button" class="btn-close ms-2" aria-label="Close" data-bs-dismiss="dropdown"></button>
+                                            </li>
+                                            
+                                            <!-- Dropdown Items -->
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Domains selected</span>
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#pricingsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Pricing</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#salesModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Sales page</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Delete</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#importLeadsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Import leads</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>techstartups.org</td>
+                                    <td>Mike</td>
+                                    <td>$ 500,000</td>
+                                    <td>12/12/2022 to 12/12/2022</td>
+                                    <td>12/12/2024</td>
+                                    <td><span class="status-badge status-expiring">expiring</span></td>
+                                    <td>12000</td>
+                                    <td>12000</td>
+                                    <td>
+                                        <!-- Dropdown button with arrow -->
+                                        <button class="btn px-2 py-2 domain-item dropdown-toggle custom-dropdown-toggle"
+                                            type="button" id="userDropdown" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>View Details</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Renew Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Terminate Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+
+                                        </ul>
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-column">
+                                        <button class="btn dropdown-toggle custom-dropdown-toggle" type="button"
+                                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <input type="checkbox" class="form-check-input domain-checkbox">
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <!-- Close Icon -->
+                                            <li class="dropdown-header d-flex justify-content-start align-items-center">
+                                                <button type="button" class="btn-close ms-2" aria-label="Close" data-bs-dismiss="dropdown"></button>
+                                            </li>
+                                            
+                                            <!-- Dropdown Items -->
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Domains selected</span>
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#pricingsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Pricing</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#salesModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Sales page</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Delete</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#importLeadsModal">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Import leads</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>techstartups.org</td>
+                                    <td>Mike</td>
+                                    <td>$ 500,000</td>
+                                    <td>12/12/2022 to 12/12/2022</td>
+                                    <td>12/12/2024</td>
+                                    <td><span class="status-badge status-pending">pending</span></td>
+                                    <td>12000</td>
+                                    <td>12000</td>
+                                    <td>
+                                        <!-- Dropdown button with arrow -->
+                                        <button class="btn px-2 py-2 domain-item dropdown-toggle custom-dropdown-toggle"
+                                            type="button" id="userDropdown" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>View Details</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Renew Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <div class="d-flex justify-content-between align-content-center">
+                                                        <span>Terminate Rental</span>
+                                                        <img src="./assets/leftarrow.svg" alt="" width="10px">
+                                                    </div>
+                                                </a></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="resulttext">Result found 12121</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Section -->
+        <div class="modal fade" id="importLeadsModal" tabindex="-1" aria-labelledby="importLeadsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body p-4">
+                        <!-- Modal Title -->
+                        <h2 class="text-center mb-2">Import Leads</h2>
+                        <p class="text-center text-muted small mb-4">
+                            Use this service only with a firm buyer agreement.<br>
+                            Unsolicited emails are not allowed. An 8% fee applies.
+                        </p>
+
+                        <!-- Form Content -->
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">First name</label>
+                                    <input type="text" class="form-control" value="Mike" readonly>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last name</label>
+                                    <input type="text" class="form-control" value="Hobs" readonly>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Email address</label>
+                                    <input type="email" class="form-control" value="mike0000000@123@gmail.com" readonly>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" value="+923555812735" readonly>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Country</label>
+                                    <select class="form-select" disabled>
+                                        <option selected>United States</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Amount</label>
+                                    <div class="input-group" style="width: 220px;">
+                                        <span class="input-group-text">$</span>
+                                        <input type="text" class="form-control" value="1212" readonly>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="text-center text-muted small mt-4">
+                                Sending unsolicited mails may lead to account suspension or a fine of $500
+                            </p>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="salesModal" tabindex="-1" aria-labelledby="salesModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body p-4">
+                        <div class="card w-100 p-4 domain-item-sm">
+                            <h4 class="mb-4  d-flex justify-content-center fw-bold">Sales</h4>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="category" class="form-label">Category</label>
+                                    <select class="form-select" id="category">
+                                        <option selected>500</option>
+                                        <option>1000</option>
+                                        <option>1500</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="description" class="form-label">Description</label>
+                                    <textarea class="form-control" id="description" rows="4"></textarea>
+                                </div>
+
+                                <h6 class=" fw-bolder">For Sale Page Theme</h6>
+                                <p class=" text-muted">Choose a template to start customizing the for sale page of this
+                                    domain only</p>
+                                <div class=" d-flex gap-5 pb-4">
+                                    <div>
+                                        <div class="form-check pb-3">
+                                            <input class="form-check-input" type="radio" name="theme" id="default"
+                                                checked>
+                                            <label class="form-check-label" for="standard">Default</label>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" name="theme" id="brandable">
+                                            <label class="form-check-label" for="minimalistic">Brandable</label>
+                                        </div>
+                                    </div>
+                                    <div class=" ">
+                                        <div class="form-check pb-3">
+                                            <input class="form-check-input" type="radio" name="theme" id="standard"
+                                                checked>
+                                            <label class="form-check-label" for="standard">Standard</label>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" name="theme" id="minimalistic">
+                                            <label class="form-check-label" for="minimalistic">Minimalistic</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class=" fw-bolder">Header Background Type</h6>
+                                <p class=" text-muted">Choose between a predefined color, your own image or your own
+                                    image with a colored overlay.</p>
+                                <div class=" d-flex gap-5">
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="radio" name="header" id="color" checked>
+                                        <label class="form-check-label" for="color">Color</label>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="radio" name="header" id="image">
+                                        <label class="form-check-label" for="image">Own Image</label>
+                                    </div>
+                                </div>
+
+                                <h6 class=" fw-bolder">For sale page background</h6>
+                                <p class=" text-muted">Set the default background color of the header in the for sale
+                                    pages. You can also
+                                    change this setting per domain by
+                                    going to your Portfolio and selecting a single domain.</p>
+
+                                <div class=" d-flex justify-content-between">
+                                    <div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="header" id="black"
+                                                checked>
+                                            <label class="form-check-label" for="color">Black</label>
+                                        </div>
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="radio" name="header" id="Yellow">
+                                            <label class="form-check-label" for="image">Yellow</label>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="header" id="Teal"
+                                                checked>
+                                            <label class="form-check-label" for="color">Teal</label>
+                                        </div>
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="radio" name="header" id="Coral">
+                                            <label class="form-check-label" for="image">Coral</label>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="header" id="Purple"
+                                                checked>
+                                            <label class="form-check-label" for="color">Purple</label>
+                                        </div>
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="radio" name="header" id="Custom">
+                                            <label class="form-check-label" for="image">Custom</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class=" fw-bolder">Font color</h6>
+                                <p class=" text-muted">Choose which of the colors work best with your background
+                                    Automatically (recommended)</p>
+
+                                <div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="radio" name="header" id="Auto">
+                                        <label class="form-check-label" for="image">Automatically (recommended)</label>
+                                    </div>
+
+                                    <div class="d-flex gap-5">
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="radio" name="header" id="Auto">
+                                            <label class="form-check-label" for="image">
+                                                Light</label>
+                                        </div>
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="radio" name="header" id="Auto">
+                                            <label class="form-check-label" for="image">
+                                                Dark Mode</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <button class="btn btn-primary w-100" type="submit">Apply</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="pricingsModal" tabindex="-1" aria-labelledby="pricingsModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body p-4">
+                        <div class="card w-100 p-4 domain-item-sm">
+                            <h4 class="mb-4 fw-bold">Pricing</h4>
+                            <form>
+                                <div
+                                    class="form-check form-switch d-flex justify-content-between align-items-center mb-3 p-0">
+                                    <div>
+                                        <label class="form-check-label" for="buyNow">Buy it Now</label>
+                                        <p>Let people immediately buy it</p>
+                                    </div>
+                                    <input class="form-check-input" type="checkbox" id="buyNow">
+                                </div>
+                                <div
+                                    class="form-check form-switch d-flex justify-content-between align-items-center mb-3 p-0">
+                                    <div>
+                                        <label class="form-check-label" for="buyNow">Make an Offer</label>
+                                        <p>Set a minimum offer price</p>
+                                    </div>
+                                    <input class="form-check-input" type="checkbox" id="buyNow">
+                                </div>
+                                <div class="form-check form-switch mb-3 p-0">
+                                    <input type="number" class="form-control mt-2" placeholder="Set a minimum price">
+                                </div>
+                                <div
+                                    class="form-check form-switch d-flex justify-content-between align-items-center mb-3 p-0">
+                                    <div>
+                                        <label class="form-check-label" for="buyNow">Lease to Own</label>
+                                        <p>Allow buyers to pay in parts</p>
+                                    </div>
+                                    <input class="form-check-input" type="checkbox" id="buyNow">
+                                </div>
+                                <div
+                                    class="form-check form-switch d-flex justify-content-between align-items-center mb-3 p-0">
+                                    <div>
+                                        <label class="form-check-label" for="buyNow">Price request</label>
+                                        <p>Allow buyers to request a price</p>
+                                    </div>
+                                    <input class="form-check-input" type="checkbox" id="buyNow">
+                                </div>
+
+
+
+                                <button class="btn btn-primary w-100" type="submit">Apply</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
